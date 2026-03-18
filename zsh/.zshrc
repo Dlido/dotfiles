@@ -5,6 +5,13 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# GPG signing
+export GPG_TTY=$(tty)
+
+# SSH agent (systemd socket-activated, auto-add key on first use)
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+ssh-add -l &>/dev/null || ssh-add &>/dev/null
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 

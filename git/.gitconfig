@@ -7,7 +7,7 @@
 [user]
 	name = Daouda Lido
 	email = dawda.lido@gmail.com
-	signingkey = 1251D542C3748F01DDC80D034709DD301AD1B88E
+	signingkey = 22B459CE8CA6158B
 
 [core]
     pager = delta
