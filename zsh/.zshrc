@@ -189,12 +189,6 @@ export _ZO_DATA_DIR="$HOME/.config/zoxide"
 export _ZO_EXCLUDE_DIRS="/tmp/*:$HOME/Downloads/*"
 export _ZO_ECHO=1
 
-eval "$(zoxide init zsh --cmd cd)"
-
-function _zi_widget() { zi; zle reset-prompt; }
-zle -N _zi_widget
-bindkey '^f' _zi_widget
-
 # fnm (node version manager)
 eval "$(fnm env --use-on-cd --shell zsh)"
 
@@ -217,6 +211,13 @@ source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 
 # Windows binaries needed in WSL (appendWindowsPath is disabled)
 export PATH="$PATH:/mnt/c/Users/dawda/AppData/Local/Programs/Microsoft VS Code/bin"
+
+# zoxide init (must be near the end)
+eval "$(zoxide init zsh --cmd cd)"
+
+function _zi_widget() { zi; zle reset-prompt; }
+zle -N _zi_widget
+bindkey '^f' _zi_widget
 
 # must be last
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
