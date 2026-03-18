@@ -1,0 +1,7 @@
+# nvim plugin data (managed by lazy.nvim)
+nvim/.config/nvim/lazy-lock.json
+nvim/.config/nvim/.git/
+nvim/.config/nvim/plugin/
+
+# zoxide database
+# bat cache

@@ -1,0 +1,52 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	name = Daouda Lido
+	email = dawda.lido@gmail.com
+	signingkey = 1251D542C3748F01DDC80D034709DD301AD1B88E
+
+[core]
+    pager = delta
+	editor = nvim
+	excludesfile = /home/dodo/.gitignore_global
+[delta]
+    navigate = true
+    side-by-side = true
+    line-numbers = true
+    syntax-theme = Catppuccin Mocha
+[interactive]
+    diffFilter = delta --color-only
+[init]
+	defaultBranch = main
+[merge]
+	conflictstyle = zdiff3
+[diff]
+	colorMoved = default
+[pull]
+	rebase = true
+[rerere]
+	enabled = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[push]
+	autoSetupRemote = true
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	cm = commit -m
+	sw = switch
+	last = log -1 HEAD
+	unstage = reset HEAD --
+	graph = log --oneline --graph --all --decorate
+	wip = !git add -A && git commit -m 'WIP'
+	undo = reset --soft HEAD~1
+	amend = commit --amend --no-edit
+	branches = branch --sort=-committerdate --format='%(committerdate:relative)%09%(refname:short)'
+	stash-all = stash push --include-untracked

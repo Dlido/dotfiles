@@ -1,0 +1,12 @@
+layout_uv() {
+  if [[ ! -f pyproject.toml ]]; then
+    echo "No pyproject.toml found" >&2
+    return 1
+  fi
+  VIRTUAL_ENV="$(pwd)/.venv"
+  if [[ ! -d "$VIRTUAL_ENV" ]]; then
+    uv venv "$VIRTUAL_ENV"
+  fi
+  PATH_add "$VIRTUAL_ENV/bin"
+  export VIRTUAL_ENV
+}

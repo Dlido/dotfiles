@@ -1,0 +1,3 @@
+[submodule "nvim/.config/nvim"]
+	path = nvim/.config/nvim
+	url = /home/dodo/dotfiles/nvim/.config/nvim\nhttps://github.com/nvim-lua/kickstart.nvim.git
